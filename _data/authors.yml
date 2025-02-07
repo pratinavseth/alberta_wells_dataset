@@ -1,6 +1,7 @@
 - name: Pratinav Seth
   title: Mila, Manipal Institute of Technology
   url: https://pratinavseth.github.io/
+  image: assets/faces/pratinavseth.jpg
 - name: Michelle Lin
   title: Mila, Université de Montréal
   url: https://pratinavseth.github.io/alberta_wells_dataset/
@@ -16,3 +17,4 @@
 - name: David Rolnick
   url: https://davidrolnick.com/
   title: Mila, McGill University
+  image: assets/faces/david.jpeg
