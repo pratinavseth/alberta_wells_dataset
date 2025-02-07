@@ -1,5 +1,5 @@
 
-## [offline-rl.github.io](https://offline-rl.github.io)
+## [Alberta Wells Dataset: Pinpointing Oil and Gas Wells from Satellite Imagery](https://arxiv.org/abs/2410.09032)
 
-Github Page for the paper "An Optimistic Perspective on Offline Reinforcement Learning".  
+Github Page for the paper "Alberta Wells Dataset: Pinpointing Oil and Gas Wells from Satellite Imagery".  
 
