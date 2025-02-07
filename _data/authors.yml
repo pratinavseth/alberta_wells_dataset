@@ -1,19 +1,23 @@
-- name: Pratinav Seth
+- name: Pratinav Seth (*)
   title: Mila, Manipal Institute of Technology
   url: https://pratinavseth.github.io/
   image: assets/faces/pratinavseth.jpg
-- name: Michelle Lin
+- name: Michelle Lin (*)
   title: Mila, Université de Montréal
   url: https://pratinavseth.github.io/alberta_wells_dataset/
+  image: assets/faces/michelle_lin.png
 - name: Brefo Dwamena Yaw
   title:  Mila
   url: https://pratinavseth.github.io/alberta_wells_dataset/
+  image: assets/faces/brefo.png
 - name: Jade Boutot
   url: https://pratinavseth.github.io/alberta_wells_dataset/
   title: McGill University
+  image: assets/faces/gpt_reseacher.jpg
 - name: Mary Kang
   url: https://pratinavseth.github.io/alberta_wells_dataset/
   title: McGill University  
+  image: assets/faces/gpt_reseacher.jpg
 - name: David Rolnick
   url: https://davidrolnick.com/
   title: Mila, McGill University
