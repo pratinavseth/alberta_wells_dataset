@@ -54,7 +54,7 @@ If you find this useful, please reference in your paper:
 </div>
 
 <p style="text-align: left">
-For questions, please contact us at:
+(* - Denotes co-first authorship) For questions, please contact us at:
 <a href="mailto:seth.pratinav@gmail.com">seth.pratinav@gmail.com</a>,
 <a href="mailto:drolnick@cs.mcgill.ca">drolnick@cs.mcgill.ca</a>.
 </p>
