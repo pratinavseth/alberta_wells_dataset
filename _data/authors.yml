@@ -1,12 +1,18 @@
-- name: Rishabh Agarwal
-  image: https://agarwl.github.io/images/rishabh_profile.jpg
-  title: Google Research, Brain Team
-  url: https://agarwl.github.io/
-- name: Dale Schuurmans
-  image: assets/faces/dale.png
-  title: UAlberta, Google
-  url: https://webdocs.cs.ualberta.ca/~dale/
-- name: Mohammad Norouzi
-  image: assets/faces/mohammad.png
-  url: https://norouzi.github.io/
-  title: Google Research, Brain Team
+- name: Pratinav Seth
+  title: Mila, Manipal Institute of Technology
+  url: https://pratinavseth.github.io/
+- name: Michelle Lin
+  title: Mila, Université de Montréal
+  url: https://pratinavseth.github.io/alberta_wells_dataset/
+- name: Brefo Dwamena Yaw
+  title:  Mila
+  url: https://pratinavseth.github.io/alberta_wells_dataset/
+- name: Jade Boutot
+  url: https://pratinavseth.github.io/alberta_wells_dataset/
+  title: McGill University
+- name: Mary Kang
+  url: https://pratinavseth.github.io/alberta_wells_dataset/
+  title: McGill University  
+- name: David Rolnick
+  url: https://davidrolnick.com/
+  title: Mila, McGill University

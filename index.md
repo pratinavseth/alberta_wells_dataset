@@ -1,84 +1,43 @@
 ---
-title: 'An Optimistic Perspective on Offline Reinforcement Learning'
+title: 'Alberta Wells Dataset: Pinpointing Oil and Gas Wells from Satellite Imagery'
 layout: default
 ---
 
 <style>thead { display: none; }</style>
 
-<p class="cover" align="center"> <img src="assets/OFFLINE_RL.gif" width="90%" /> </p>
+<!-- <p class="cover" align="center"> <img src="assets/OFFLINE_RL.gif" width="90%" /> </p> -->
 
-## DQN Replay Dataset 
+## Alberta Wells Dataset
 
-The DQN Replay Dataset was collected as follows:
-We first train a [DQN][nature_dqn] agent, on all 60 [Atari 2600 games][ale]
-with [sticky actions][stochastic_ale] enabled for 200 million frames (standard protocol) and save all of the experience tuples
-of *(observation, action, reward, next observation)* (approximately 50 million)
-encountered during training. We repeat this process five times for each game.
+Millions of abandoned oil and gas wells are scattered across the world, leaching methane into the atmosphere and toxic compounds into the groundwater.
+Many of these locations are unknown, preventing the wells from being plugged and their polluting effects averted. Remote sensing is a relatively unexplored tool for pinpointing abandoned wells at scale.
 
-### Important notes on Atari ROM versions
+We introduce the first large-scale Benchmark dataset for this problem, leveraging high-resolution multi-spectral satellite imagery from Planet Labs.
+Our curated Dataset comprises over 213,000 wells (abandoned, suspended, and active) from Alberta, a region with especially high well density, sourced from the Alberta Energy Regulator and verified by domain experts.
+We evaluate baseline algorithms for well detection and segmentation, showing the promise of computer vision approaches and room for improvement. 
 
-The DQN replay dataset is generated using [a legacy set of Atari ROMs](https://github.com/openai/atari-py/tree/0.2.5/atari_py/atari_roms) specified in [`atari-py<=0.2.5`](https://github.com/openai/atari-py/tree/0.2.5), which is different from the ones specified in [`atari-py>=0.2.6`](https://github.com/openai/atari-py/tree/0.2.6) or in recent versions of [`ale-py`](https://github.com/mgbellemare/Arcade-Learning-Environment). To avoid train/evaluation mismatches, it is important to use `atari-py<=0.2.5` and also `gym<=0.19.0`, as higher versions of `gym` no longer support `atari-py`. 
+The dataset is drawn from the province of Alberta, Canada, a region with the third-largest oil reserves in the world and a substantial number of oil and gas wells, many of which have been present for over a century. The entire province of Alberta (an area larger than the UK and Germany combined) encompasses a diverse range of geographical zones and is highly diverse for a landlocked region, including prairies, lakes, forests, and mountains.
 
-Alternatively, if you prefer to use recent versions of `ale-py` and `gym`, you can manually download the legacy ROMs from [`atari-py==0.2.5`](https://github.com/openai/atari-py/tree/0.2.5/atari_py/atari_roms) and specify the ROM paths in `ale-py`. For example, assuming `atari_py_rom_breakout` is the path to the downloaded ROM file `breakout.bin`, you can do the following before creating the gym environment:
+Alberta Energy Regulator (AER) \citep{aerST37}, which publishes monthly reports on well locations, operation modes, and product types. However, the data often contains duplicates and inconsistencies, so we work with domain experts to clean and categorize the wells as active, suspended, or abandoned. After filtering the dataset, we divide the geographic area into non-overlapping image patches, each covering 1.1025 sq km, and make sure there's a balanced mix of patches with and without wells. For satellite imagery, we use high-resolution RGB and Near Infrared images from PlanetScope \citep{planetlabs}. We process the images to ensure quality and consistency. Then, we annotate the image patches for both binary segmentation and object detection tasks, following the COCO format for object detection. To create balanced training and test sets, we design a dataset-splitting algorithm that groups wells by their geographic proximity. This dataset is crafted to help train machine learning models and simulate real-world conditions for better well detection and environmental monitoring
 
-```
-import ale_py.roms
-ale_py.roms.Breakout = atari_py_rom_breakout
-```
-
-Note that this is an ad-hoc trick to circumvent the md5 checks in `ale-py<=0.7.5` and it may not work in future versions of `ale-py`. **Do not use this solution unless you know what you are doing**.
-
-## Dataset and Training details
-
-This logged DQN data can be found in the public [GCP bucket][gcp_bucket]
-`gs://atari-replay-datasets` which can be downloaded using [`gsutil`][gsutil].
-To install gsutil, follow the instructions [here][gsutil_install].
-
-After installing gsutil, run the command to copy the entire dataset:
-
-```
-gsutil -m cp -R gs://atari-replay-datasets/dqn
-```
-
-To run the dataset only for a specific Atari 2600 game (*e.g.*, replace `GAME_NAME`
-by `Pong` to download the logged DQN replay datasets for the game of Pong),
-run the command:
-
-```
-gsutil -m cp -R gs://atari-replay-datasets/dqn/[GAME_NAME]
-```
-
-This data can be generated by running the online agents using
-[`batch_rl/baselines/train.py`](https://github.com/google-research/batch_rl/blob/master/batch_rl/baselines/train.py) for 200 million frames
-(standard protocol). Note that the dataset consists of approximately 50 million
-experience tuples due to frame skipping (*i.e.*, repeating a selected action for
-`k` consecutive frames) of 4. The stickiness parameter is set to 0.25, *i.e.*,
-there is 25% chance at every time step that the environment will execute the
-agent's previous action again, instead of the agent's new action.
-
-
-[nature_dqn]: https://www.nature.com/articles/nature14236?wm=book_wap_0005
-[gsutil_install]: https://cloud.google.com/storage/docs/gsutil_install#install
-[gsutil]: https://cloud.google.com/storage/docs/gsutil
-[stochastic_ale]: https://arxiv.org/abs/1709.06009
-[ale]: https://github.com/mgbellemare/Arcade-Learning-Environment
-[gcp_bucket]: https://console.cloud.google.com/storage/browser/atari-replay-datasets
-
-<p class="cover" align="center"> <img src="assets/draw_off.png" width="85%" /> </p>
+<!--<p class="cover" align="center"> <img src="assets/draw_off.png" width="85%" /> </p> -->
 
 Citing
 ------
-If you find this open source release useful, please reference in your paper:
+If you find this useful, please reference in your paper:
 
-> Agarwal, R., Schuurmans, D. & Norouzi, M.. (2020).
-> An Optimistic Perspective on Offline Reinforcement Learning
-> *International Conference on Machine Learning (ICML)*.
+> Seth, P., Lin, M., Yaw, B.D., Boutot, J., Kang, M., & Rolnick, D. (2024). 
+> Alberta Wells Dataset: Pinpointing Oil and Gas Wells from Satellite Imagery. 
+> ArXiv, abs/2410.09032.
 
-    @inproceedings{agarwal2020optimistic,
-      title={An optimistic perspective on offline reinforcement learning},
-      author={Agarwal, Rishabh and Schuurmans, Dale and Norouzi, Mohammad},
-      booktitle={International Conference on Machine Learning},
-      year={2020}
+    @misc{seth2024albertawellsdatasetpinpointing,
+      title={Alberta Wells Dataset: Pinpointing Oil and Gas Wells from Satellite Imagery}, 
+      author={Pratinav Seth and Michelle Lin and Brefo Dwamena Yaw and Jade Boutot and Mary Kang and David Rolnick},
+      year={2024},
+      eprint={2410.09032},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.09032}, 
     }
 
 ## Authors
@@ -96,6 +55,6 @@ If you find this open source release useful, please reference in your paper:
 
 <p style="text-align: left">
 For questions, please contact us at:
-<a href="mailto:rishabhagarwal@google.com">rishabhagarwal@google.com</a>,
-<a href="mailto:mnorouzi@google.com">mnorouzi@google.com</a>.
+<a href="mailto:seth.pratinav@gmail.com">seth.pratinav@gmail.com</a>,
+<a href="mailto:drolnick@cs.mcgill.ca">drolnick@cs.mcgill.ca</a>.
 </p>
