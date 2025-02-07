@@ -42,7 +42,7 @@ If you find this useful, please reference in your paper:
 
 ## Authors
 
-<div style="text-align: left;">
+<div style="text-align: center;">
 {%- for person in site.data.authors -%}
 <div class="person">
   <img src="{{ person.image }}" />
@@ -53,7 +53,7 @@ If you find this useful, please reference in your paper:
 {%- endfor -%}
 </div>
 
-<p style="text-align: left">
+<p style="text-align: center">
 (* - Denotes co-first authorship) For questions, please contact us at:
 <a href="mailto:seth.pratinav@gmail.com">seth.pratinav@gmail.com</a>,
 <a href="mailto:drolnick@cs.mcgill.ca">drolnick@cs.mcgill.ca</a>.
