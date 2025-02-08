@@ -20,7 +20,7 @@ The dataset is drawn from the province of Alberta, Canada, a region with the thi
 
 Alberta Energy Regulator (AER) \citep{aerST37}, which publishes monthly reports on well locations, operation modes, and product types. However, the data often contains duplicates and inconsistencies, so we work with domain experts to clean and categorize the wells as active, suspended, or abandoned. After filtering the dataset, we divide the geographic area into non-overlapping image patches, each covering 1.1025 sq km, and make sure there's a balanced mix of patches with and without wells. For satellite imagery, we use high-resolution RGB and Near Infrared images from PlanetScope \citep{planetlabs}. We process the images to ensure quality and consistency. Then, we annotate the image patches for both binary segmentation and object detection tasks, following the COCO format for object detection. To create balanced training and test sets, we design a dataset-splitting algorithm that groups wells by their geographic proximity. This dataset is crafted to help train machine learning models and simulate real-world conditions for better well detection and environmental monitoring
 
-<!--<p class="cover" align="center"> <img src="assets/draw_off.png" width="85%" /> </p> -->
+<p class="cover" align="center"> <img src="assets/AWD.png" width="85%" /> </p>
 
 Citing
 ------
