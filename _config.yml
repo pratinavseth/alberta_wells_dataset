@@ -3,11 +3,11 @@ title: Alberta Wells Dataset Pinpointing Oil and Gas Wells from Satellite Imager
 description:
 - Pre-Print
 buttons:
-  Dataset: https://github.com/deepmind/deepmind-research/tree/master/rl_unplugged
-  Code: ""
+  Dataset: https://zenodo.org/records/13743323
+  Code: https://github.com/RolnickLab/Alberta_Wells_Dataset
 #  DQN Replay Dataset: https://research.google/tools/datasets/dqn-replay/
 #  Blog: https://ai.googleblog.com/2020/04/an-optimistic-perspective-on-offline.html
-  Paper: 'https://arxiv.org/pdf/2403.17381.pdf'
+  Paper: 'https://arxiv.org/pdf/2410.09032.pdf'
 #  Code: 'https://github.com/google-research/batch_rl'  
 #  Talk: 'https://slideslive.com/38928373/an-optimistic-perspective-on-offline-deep-reinforcement-learning'
 #  Slides: 'https://docs.google.com/presentation/d/1ROltXr6FIeYKrnGl0tKHGWI0pL4Zo8CnvAK2-cdpQyY/edit?usp=sharing'
