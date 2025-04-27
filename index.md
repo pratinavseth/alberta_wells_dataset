@@ -46,6 +46,8 @@ We Evaluated models for detection and segmentation task and we found that :
 
  <p class="cover" align="center"> <img src="assets/awdf.png" width="85%" /> </p>
 
+ NOTE : Please refer to the pre-print for more samples.
+
 
 
 Citing
