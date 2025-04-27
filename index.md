@@ -44,6 +44,8 @@ We Evaluated models for detection and segmentation task and we found that :
 
  ## Qualitative Samples :
 
+ We share a few Qualitative Samples of Dataset and Predictions from Model below :
+
  <p class="cover" align="center"> <img src="assets/awdfill.png" width="85%" /> </p>
 
  NOTE : Please refer to the pre-print for more samples.
