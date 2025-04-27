@@ -15,7 +15,7 @@ SOLUTION : Leveraging remote sensing and machine learning to detect wells from m
 
 ## Alberta Wells Dataset
 
-We introduce the first large-scale Benchmark dataset for this problem, leveraging high-resolution (3m/px) multi-spectral satellite imagery from Planet Labs with diverse landscape (prairies, forests, mountains) of Albeerta Region of Canada.
+We introduce the first large-scale Benchmark dataset for this problem, leveraging high-resolution (3m/px) multi-spectral satellite imagery from Planet Labs with diverse landscape.
 Our curated Dataset comprises over 213,447 wells (abandoned, suspended, and active) from Alberta, a region with especially high well density, sourced from the Alberta Energy Regulator and verified by domain experts.
 We evaluate baseline algorithms for well detection and segmentation, showing the promise of computer vision approaches and room for improvement. 
 
