@@ -7,22 +7,20 @@ layout: default
 
 <!-- <p class="cover" align="center"> <img src="assets/OFFLINE_RL.gif" width="90%" /> </p> -->
 
-## Alberta Wells Dataset
+## Introduction
 
 PROBLEM :  Millions of abandoned oil and gas wells are scattered across the world, leaching methane into the atmosphere and toxic compounds into the groundwater. Many of these locations are unknown, preventing the wells from being plugged and their polluting effects averted. 
 
-
 SOLUTION : Leveraging remote sensing and machine learning to detect wells from medium-resolution satellite imagery
 
-However, Remote sensing is a relatively unexplored tool for pinpointing abandoned wells at scale.
-
-
+## Alberta Wells Dataset
 
 We introduce the first large-scale Benchmark dataset for this problem, leveraging high-resolution (3m/px) multi-spectral satellite imagery from Planet Labs with diverse landscape (prairies, forests, mountains) of Albeerta Region of Canada.
 Our curated Dataset comprises over 213,447 wells (abandoned, suspended, and active) from Alberta, a region with especially high well density, sourced from the Alberta Energy Regulator and verified by domain experts.
 We evaluate baseline algorithms for well detection and segmentation, showing the promise of computer vision approaches and room for improvement. 
 
-<p class="cover" align="center"> <img src="assets/AWD.png" width="85%" /> </p>
+<p class="cover" align="center"> <img src="assets/awdf1.png" width="85%" /> </p>
+
 
 The dataset is drawn from the province of Alberta, Canada, a region with the third-largest oil reserves in the world and a substantial number of oil and gas wells, many of which have been present for over a century. The entire province of Alberta (an area larger than the UK and Germany combined) encompasses a diverse range of geographical zones and is highly diverse for a landlocked region, including prairies, lakes, forests, and mountains.
 
@@ -32,13 +30,21 @@ We then divide Alberta into non-overlapping patches, each covering 1.1025 sq km,
 
 To create balanced training and test sets, we develop a dataset-splitting algorithm that groups wells by geographic proximity. This ensures a representative mix of patches with and without wells, allowing machine learning models to train effectively under real-world conditions for improved well detection and environmental monitoring.
 
+<p class="cover" align="center"> <img src="assets/awdf2.png" width="85%" /> </p>
 
+## Experiments & Analysis : 
 
 We Evaluated models for detection and segmentation task and we found that :
 - Small object size (30 pixels) and large number of wells in a single instance makes task challenging.
 - Training on only active wells misses abandoned ones; including active, suspended, and abandoned wells improves generalization.
 - For Binary segmentation Task (Best : U-Net with EfficientNet-B6)
 - For Object detection Task (Best : DETR with ResNet50)
+
+<p class="cover" align="center"> <img src="assets/awdf3.png" width="85%" /> </p>
+
+ ## Qualitative Samples :
+
+ <p class="cover" align="center"> <img src="assets/awdf.png" width="85%" /> </p>
 
 
 
