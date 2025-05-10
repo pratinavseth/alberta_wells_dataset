@@ -1,7 +1,7 @@
 intro:
 title: "Alberta Wells Dataset: Pinpointing Oil and Gas Wells from Satellite Imagery"
 description:
-- Pre-Print
+- Accepted at ICML 2025
 buttons:
   Dataset: https://zenodo.org/records/13743323
   Code: https://github.com/RolnickLab/Alberta_Wells_Dataset
