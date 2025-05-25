@@ -41,6 +41,7 @@ We Evaluated models for detection and segmentation task and we found that :
 - For Object detection Task (Best : DETR with ResNet50)
 
 <p class="cover" align="center"> <img src="assets/awdf3.png" width="85%" /> </p>
+<br>
 
  ## Qualitative Samples :
 
